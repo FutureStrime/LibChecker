@@ -50,7 +50,7 @@ fun Project.setupAppModule(block: BaseAppModuleExtension.() -> Unit = {}) {
         applicationIdSuffix = ".debug"
       }
       release {
-        isMinifyEnabled = true
+        isMinifyEnabled = false
         isShrinkResources = true
       }
       all {
