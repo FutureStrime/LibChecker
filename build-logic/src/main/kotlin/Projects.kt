@@ -51,7 +51,7 @@ fun Project.setupAppModule(block: BaseAppModuleExtension.() -> Unit = {}) {
       }
       release {
         isMinifyEnabled = false
-        isShrinkResources = true
+        isShrinkResources = false
       }
       all {
         signingConfig = releaseSigning
