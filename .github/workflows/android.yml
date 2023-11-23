@@ -80,13 +80,13 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew -PappVerName=${{ env.VERSION }} app:assembleRelease
       - name: Upload built Foss apk
-        if: success() && github.event_name != 'pull_request' && github.repository == 'LibChecker/LibChecker'
+        if: success() && github.event_name != 'pull_request'
         uses: actions/upload-artifact@v3
         with:
           name: Foss
           path: ${{ github.workspace }}/app/build/outputs/apk/foss/release
       - name: Upload built Market apk
-        if: success() && github.event_name != 'pull_request' && github.repository == 'LibChecker/LibChecker'
+        if: success() && github.event_name != 'pull_request'
         uses: actions/upload-artifact@v3
         with:
           name: Market
